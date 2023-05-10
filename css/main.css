@@ -19,6 +19,14 @@ ul {
   list-style: none;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
 @media (min-width: 768px) {
 .container {
   width: 750px;
@@ -37,11 +45,57 @@ ul {
   }
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-header
+header .container::after{
+  content: "";
+  position: absolute;
+  background-color: #706e6e;
+  height: 1px;
+  bottom: 0;
+  width: calc(100% - 30px);
+  left: 15;
+}
+
+nav {
+  font-size: 14px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color :white;
+}
+
+nav ul li {
+  margin: 15px;  
+  position: relative;
+
+}
+nav > ul > li > .active {
+  color: #17b6e3;
+}
+nav > ul > li::after {
+  color: #17b6e3;
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
