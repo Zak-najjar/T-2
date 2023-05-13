@@ -6,6 +6,12 @@
   margin: 0;
 }
 
+:root {
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --section-padding: 100px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -61,10 +67,13 @@ header .container::after{
   bottom: 0;
   width: calc(100% - 30px);
   left: 15;
+  z-index: -1;
 }
 
 nav {
   font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 nav ul {
   display: flex;
@@ -77,21 +86,25 @@ nav a {
 }
 
 nav ul li {
-  margin: 15px;  
-  position: relative;
+  padding: 43px 10px;
+}
 
+
+nav ul li:hover > a {
+  color: var(--main-color);
+  transition: color 0.5s ease;
 }
-nav > ul > li > .active {
-  color: #17b6e3;
+
+nav ul li:hover {
+  border-bottom: 1px solid var(--main-color);
+  transition: border-bottom 0.5s ease;
 }
-nav > ul > li::after {
-  color: #17b6e3;
-  position: absolute;
-  content: "";
-  height: 10px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
+
+nav ul > li:first-child {
+  border-bottom: 1px solid var(--main-color) !important;
+}
+nav ul li:nth-child(1) a {
+  color: var(--main-color);
 }
 
 .logo img {
@@ -99,3 +112,19 @@ nav > ul > li::after {
   height: 100px;
 }
 
+header nav .form {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid white;
+}
+
+header nav .form i {
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
