@@ -215,3 +215,43 @@ header nav .form i {
 }
 
 
+.landing .change-background {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  
+}
+
+.landing .fa-angle-right {
+  right: 30px;
+}
+
+.landing .fa-angle-left {
+  left: 30px;
+}
+
+.bullet {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 0 10px;
+}
+
+.bullet li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.landing .active {
+  border: 0;
+  background-color: var(--main-color);
+  z-index: 1;
+}
+.landing .active::marker {
+  color: var(--main-color);
+}
