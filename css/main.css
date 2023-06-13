@@ -143,10 +143,6 @@ nav ul li:nth-child(1) a {
   color: var(--main-color);
 }
 
-.logo img {
-  width: 80px;
-  height: 80px;
-}
 
 header nav .form {
   width: 40px;
@@ -328,4 +324,68 @@ header nav .form i {
 }
 .content .serv-box i{
   margin-right: 50px;
+}
+
+@media (max-width:767px) {
+  .design .imagess {
+    display: none;
+  }
+}
+.design {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  height: 600px;
+  position: relative;
+  background-image: url(../imgs/df.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.design::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 50%);
+}
+.design .text,
+.design .imagess {
+  position: relative ;
+  flex: 1;
+}
+
+.design .imagess {
+  text-align: center;
+  bottom: -150px;
+}
+
+.design .text {
+  padding: 20px;
+  background-color: #0c4f67;
+  color: white;
+}
+
+.design .text h2 {
+  padding: 20px;
+  font-weight: lighter;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.design .text ul {
+  margin-left: 40px;
+}
+
+.design .text li {
+  padding: 15px 0;
+}
+
+.design .text li::before {
+  font-family: 'Font awesome 5 Free';
+  content: '\f108';
+  font-weight: 900;
+  margin-right: 20px;
 }
