@@ -389,3 +389,86 @@ header nav .form i {
   font-weight: 900;
   margin-right: 20px;
 }
+
+.portofolio {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.portofolio .container {
+  text-align: center;
+}
+.shuffle {
+  text-align: center;
+}
+
+.shuffle ul {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.shuffle ul li {
+  padding: 10px;
+}
+
+.shuffle ul li:first-child {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+  grid-template-rows: repeat(2, 222px);
+  gap: 5px 0;
+  height: 450px;
+}
+
+.img-container img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.img-container .box {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container .box .caption {
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  content: '';
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  transition: .3s;
+}
+
+.img-container .box:hover .caption {
+  bottom: 0;
+}
+
+.img-container .box:hover img {
+  transform: rotate(2deg) scale(1.1);
+}
+
+.img-container .box .caption h4{
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+
+.img-container .box .caption p {
+  color: var(--main-color);
+}
+
+.portofolio a {
+  text-transform: uppercase;
+  padding: 15px 20px;
+  background-color: var(--main-color);
+  text-decoration: none;
+  color: white;
+  margin: 30px auto;
+  display: block;
+  width: fit-content;
+}
