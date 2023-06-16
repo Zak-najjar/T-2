@@ -522,3 +522,78 @@ header nav .form i {
   background-color: black;
   text-transform: uppercase;
 }
+
+
+.about {
+  padding-top: 110px;
+  position: relative;
+  text-align: center;
+}
+
+.about .devices {
+  z-index: -2;
+  
+}
+
+.about .stats {
+  background-image: url(/imgs/stats.png);
+  display: flex;
+  position: relative;
+  transform: translateY(-25%);
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.stats .overlay {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 70%);
+}
+.stats .col {
+  color: white;
+  background-color: #1482a1b1;
+  position: relative;
+  padding: 50px;
+}
+@media (max-width: 767px) {
+  .stats .col {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .stats .col {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .stats .col {
+    flex-basis: 25%;
+  }
+}
+.stats .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.stats .col h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.stats .col i {
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 30px;
+}
