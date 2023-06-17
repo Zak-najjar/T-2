@@ -182,7 +182,7 @@ header nav .form i {
   background-color: rgba(0, 0, 0, 50%);
 }
 
-.landing .text .content {
+.landing .text .content-1 {
   color:white;
   font-size: 20px;
   max-width: 500px;
@@ -200,11 +200,11 @@ header nav .form i {
 }
 
 
-.landing .text .content p{
+.landing .text .content-1 p{
   font-size: .7em;
   line-height: 1.8;
 }
-.landing .text .content h2{
+.landing .text .content-1 h2{
   font-weight: normal;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -526,25 +526,28 @@ header nav .form i {
 
 .about {
   padding-top: 110px;
-  position: relative;
   text-align: center;
+  display: block;
 }
 
-.about .devices {
-  z-index: -2;
+.about img {
+  position: relative;
+  bottom: -120px;
+  margin-top: -120px;
+  max-width: 100%;
   
 }
 
-.about .stats {
+.stats {
   background-image: url(/imgs/stats.png);
   display: flex;
   position: relative;
-  transform: translateY(-25%);
   align-items: center;
   justify-content: center;
   background-size: cover;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+  text-align: center;
 }
 
 .stats .overlay {
@@ -596,4 +599,92 @@ header nav .form i {
   justify-content: center;
   align-items: center;
   margin: 0 auto 30px;
+}
+
+
+.pref {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  height: 100vh;
+}
+
+.pref .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.test {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  flex-basis: 45%;
+}
+.test .heading h3 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+.test .heading p {
+  opacity: .7;
+  line-height: 2;
+}
+.test .heading {
+  margin-bottom: 60px;
+}
+
+.test .stuff .one{
+  display: flex;
+  text-align: start;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.test .stuff .one img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+.test .stuff .one .text p:last-child {
+  text-align: right;
+  margin-bottom: 10px;
+  opacity: .7;
+  font-size: 14px;
+}
+
+.test .stuff .one .text {
+  border-bottom: 1px solid gray;
+}
+
+
+
+.bullet-2 ul{
+  display: flex;
+  justify-content: center;
+  gap: 0 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.bullet-2 li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.529);
+}
+
+.bullet-2 .active {
+  border: 0;
+  background-color: var(--main-color);
+  z-index: 1;
+}
+.bullet-2 .active::marker {
+  color: var(--main-color);
+}
+
+
+.skills {
+  flex-basis: 45%;
 }
