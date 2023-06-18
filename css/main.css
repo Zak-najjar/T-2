@@ -199,7 +199,12 @@ header nav .form i {
   justify-content: flex-end;
 }
 
-
+@media (max-width: 768px) {
+.landing .text {
+  font-size: 10px;
+  width: 100%;
+}
+}
 .landing .text .content-1 p{
   font-size: .7em;
   line-height: 1.8;
@@ -614,18 +619,29 @@ header nav .form i {
   flex-wrap: wrap;
 }
 
+@media (min-width:992px) {
+  .test {
+    flex-basis: 45%;
+  }
+  .skills {
+    flex-basis: 45%;
+  }
+}
+
 .test {
   display: flex;
   text-align: center;
   flex-direction: column;
-  flex-basis: 45%;
 }
-.test .heading h3 {
+.heading {
+  text-align: center;
+}
+.heading h3 {
   text-transform: uppercase;
   margin-bottom: 40px;
   font-weight: normal;
 }
-.test .heading p {
+.heading p {
   opacity: .7;
   line-height: 2;
 }
@@ -639,7 +655,17 @@ header nav .form i {
   margin-bottom: 30px;
   line-height: 1.7;
 }
-
+@media (max-width:992px) {
+  .one {
+    text-align: center !important;
+    align-items: center;
+    flex-direction: column;
+  }
+  .one img {
+    margin-right: 0 !important;
+    margin-bottom: 20px;
+  }
+}
 .test .stuff .one img {
   width: 100px;
   height: 100px;
@@ -684,7 +710,47 @@ header nav .form i {
   color: var(--main-color);
 }
 
-
-.skills {
-  flex-basis: 45%;
+.pref .skills .prog-holder{
+  margin-bottom: 40px;
 }
+
+.pref .skills .prog-holder h4 {
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.pref .skills .prog-holder .prog {
+  height: 30px;
+  background-color: #eee;
+}
+
+
+.pref .skills .prog-holder .prog span{
+  display: block;
+  background-color: var(--main-color);
+  height: 100%;
+  position: relative;
+}
+
+
+.pref .skills .prog-holder .prog span::before{
+  content: attr(data-progress);
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+.pref .skills .prog-holder .prog span::after{
+  position: absolute;
+  content: "";
+  top: -15px;
+  right: -8px;
+  border-color: black transparent transparent transparent;
+  border-style: solid;
+  border-width: 8px;
+}
+
