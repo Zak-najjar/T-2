@@ -274,30 +274,29 @@ header nav .form i {
   font-size: 40px;
   font-weight: 400;
   text-transform: uppercase;
+  position: relative;
 }
 .main-heading h2::before {
   width: 120px;
-  max-width: 100%;
   background-color: black;
   height: 2px;
   position: absolute;
   content: '';
-  top: 48%;
-  left: 49%;
-  transform: translate(-50px);
+  bottom: -30px;
+  left:  50%;
+  transform: translateX(-50%);
 }
 .main-heading h2::after {
   width: 14px;
-  max-width: 100%;
   height: 14px;
   background-color: white;
   border: 2px solid black;
   border-radius: 50px;
   position: absolute;
   content: '';
-  top: 44.5%;
-  left: 53.5%;
-  transform: translate(-50px);
+  bottom: -38px;
+  left:  50%;
+  transform: translateX(-50%);
 }
 .main-heading p {
   margin: 0 auto 100px;
@@ -610,7 +609,6 @@ header nav .form i {
 .pref {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  height: 100vh;
 }
 
 .pref .container {
@@ -789,4 +787,102 @@ header nav .form i {
 
 .quote span {
   margin-top: 20px;
+}
+
+
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.pricing footer {
+  text-align: center;
+  margin-top: 60px;
+}
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  text-align: center;
+  gap: 0 30px;
+}
+.plans .plan {
+  background-color: #e8e3e32d;
+}
+.plan .head {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--main-color);
+}
+
+.plan .head p {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.plan .head span {
+  font-size: 60px;
+  font-weight: bolder;
+  position: relative;
+  margin-left: 15px;
+}
+
+.plan .head span::before {
+  position: absolute;
+  content: '$';
+  font-weight: normal;
+  font-size: 25px;
+  top: 0px;
+  left: -30px;
+}
+
+
+.plan .head span::after {
+  content: '/Mo';
+  font-size: 20px;
+  position: relative;
+  right: -15px;
+}
+.plans ul {
+  border: 1px solid ;
+  border-color: var(--main-color) transparent;
+}
+.plans ul li {
+  padding: 20px;
+  border-bottom: 1px solid var(--main-color);
+  border-width: 100%;
+  text-align: center;
+  margin: 0;
+  width: fit-content;
+  margin: auto;
+}
+
+.plans ul li:last-child {
+  border: none;
+}
+
+.plans .plan .foot {
+  text-align: center;
+  margin: 30px;
+}
+
+.plans .plan  .foot a {
+  padding: 20px;
+  border: 1px solid var(--main-color);
+  width: fit-content;
+  text-decoration: none;
+  display: block;
+  margin: auto;
+}
+
+.pricing footer p {
+  font-size: 20px;
+}
+.pricing footer a {
+  padding: 15px 30px;
+  background-color: var(--main-color);
+  text-decoration: none;
+  color: white;
+  margin: 25px auto;
+  display: block;
+  width: fit-content;
 }
