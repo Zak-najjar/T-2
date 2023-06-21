@@ -477,7 +477,7 @@ header nav .form i {
 
 .video {
   height: 100vh;
-  background-image: url(/imgs/gif.gif);
+  background-image: url(../imgs/gif.gif);
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -541,7 +541,7 @@ header nav .form i {
 }
 
 .stats {
-  background-image: url(/imgs/stats.png);
+  background-image: url(../imgs/stats.png);
   display: flex;
   position: relative;
   align-items: center;
@@ -753,7 +753,7 @@ header nav .form i {
 
 
 .quote {
-  background-image: url(/imgs/quote.jpg);
+  background-image: url(../imgs/quote.jpg);
   background-size: cover;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -888,7 +888,7 @@ header nav .form i {
 
 
 .sub {
-  background-image: url(/imgs/subscribe.jpg);
+  background-image: url(../imgs/subscribe.jpg);
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-size: cover;
@@ -1047,7 +1047,7 @@ header nav .form i {
 
 
 footer {
-  background-image: url(/imgs/subscribe.jpg);
+  background-image: url(../imgs/subscribe.jpg);
   position: relative;
 }
 
