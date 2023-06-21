@@ -367,21 +367,18 @@ header nav .form i {
 }
 
 .design .text {
-  padding: 20px;
+  padding: 40px;
   background-color: #0c4f67;
   color: white;
 }
 
 .design .text h2 {
-  padding: 20px;
+  padding: 20px 0;
   font-weight: lighter;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
 
-.design .text ul {
-  margin-left: 40px;
-}
 
 .design .text li {
   padding: 15px 0;
@@ -397,6 +394,7 @@ header nav .form i {
 .portofolio {
   padding-top: 100px;
   text-align: center;
+  margin-bottom: 130px;
 }
 
 .portofolio .container {
@@ -481,8 +479,8 @@ header nav .form i {
   height: 100vh;
   background-image: url(/imgs/gif.gif);
   background-size: cover;
-  padding: 0;
   margin: 0;
+  padding: 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -794,7 +792,7 @@ header nav .form i {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
-.pricing footer {
+.pricing .end {
   text-align: center;
   margin-top: 60px;
 }
@@ -874,10 +872,10 @@ header nav .form i {
   margin: auto;
 }
 
-.pricing footer p {
+.pricing .end p {
   font-size: 20px;
 }
-.pricing footer a {
+.pricing .end a {
   padding: 15px 30px;
   background-color: var(--main-color);
   text-decoration: none;
@@ -885,4 +883,219 @@ header nav .form i {
   margin: 25px auto;
   display: block;
   width: fit-content;
+}
+
+
+
+.sub {
+  background-image: url(/imgs/subscribe.jpg);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-size: cover;
+  height: 260px;
+  position: relative;
+  display: flex;
+  color: white;
+}
+
+.sub::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 50%);
+}
+
+
+.sub .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .sub .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sub .container p {
+    margin-top: 30px;
+  }
+}
+
+
+.sub .container i {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+}
+
+.sub .container form {
+  display: flex;
+  background-color: transparent;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+}
+
+.sub .container form input[type="email"] {
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 20px 20px 20px 60px;
+  caret-color: var(--main-color);
+  width: calc(100% - 130px);
+  border-right-color: transparent;
+}
+.sub ::placeholder {
+  color: white;
+}
+.sub .container form input[type="submit"] {
+  width: 130px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-left-color: transparent;
+  text-transform: uppercase;
+}
+.sub .container form input[type="email"]:focus, 
+.sub .container form input[type="submit"] :focus {
+  outline: none;
+}
+
+
+.sub .container p {
+  margin-left: 50px;
+  line-height: 2;
+}
+
+
+
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.contact .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  max-width: 100%;
+}
+
+.contact .container form input,
+.contact .container form textarea{
+  padding: 20px;
+}
+
+
+.contact .container form input[type="email"],
+.contact .container form textarea,
+.contact .container form input[type="text"] {
+  margin-bottom: 30px;
+  border: 1px solid rgba(128, 128, 128, 0.444);
+}
+
+.contact .container form input[type="email"]:focus,
+.contact .container form textarea:focus,
+.contact .container form input[type="text"]:focus {
+  outline: none;
+}
+
+
+
+.contact .container form input[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  border: 1px solid white;
+  text-transform: uppercase;
+  width: fit-content;
+  margin: auto 0 auto auto;
+}
+
+
+.contact .inf {
+  margin-left: 50px;
+}
+
+.contact .inf h4 {
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.contact .inf .num {
+  margin-bottom: 90px;
+}
+
+.contact .inf li{
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.contact .inf .add li {
+  font-style: italic;
+}
+
+
+footer {
+  background-image: url(/imgs/subscribe.jpg);
+  position: relative;
+}
+
+footer::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 50%);
+}
+
+footer .container {
+  position: relative;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+footer .container img {
+  margin-bottom: 40px;
+}
+
+footer .container p:not(.copyright) {
+  font-size: 22px;
+  color: white;
+  padding-bottom: 20px;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+footer .container p:not(.copyright) {
+  border-bottom: 1px solid white;
+}
+
+footer .container .social-icons {
+  margin-top: 15px;
+  margin-bottom: 70px;
+}
+
+footer .container .social-icons i {
+  color: white;
+  font-size: 20px;
+  padding: 10px 15px;
+}
+
+footer .copyright {
+  color: white;
 }
